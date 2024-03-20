@@ -16,6 +16,7 @@ export default function Navbar() {
                                     <Icons.logo className='h-10 w-10'/>
                                 </Link>
                             </div>
+                            {/* Only for desktop */}
                             <div className='hidden z-50 lg:ml-8 lg:block lg:self-stretch'>
                                 <NavItems/>
                             </div>
