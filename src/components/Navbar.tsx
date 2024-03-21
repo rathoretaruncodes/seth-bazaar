@@ -3,6 +3,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 import { Icons } from "./Icons";
 import NavItems from "./NavItems";
 import { buttonVariants } from "./ui/button";
+import Cart from "./Cart";
 
 export default function Navbar() {
 
@@ -46,10 +47,16 @@ export default function Navbar() {
                                     {user ? <span className='h-6 w-px bg-gray-200'
                                     aria-hidden='true'/> : null}
 
-                                    {user ? null : <div className='flex lg:ml-6'>
+                                    {user ? null : (
+                                        <div className='flex lg:ml-6'>
                                         <span className='h-6 w-px bg-gray-200'
                                         aria-hidden='true'/>
-                                        </div>}
+                                        </div>
+                                    )}
+
+                                    <div className='nl-4 flow-root lg:ml-6'>
+                                        <Cart />
+                                    </div>
 
 
                                 </div>
