@@ -29,7 +29,7 @@ export default function Home() {
       <span className='text-purple-600'>digital assets</span>
       .
       </h1>
-      <p className='mt-6 text-lg max-w-prose text-muted-foreground'>Welcome to Seths Bazaar. Every asset on our platform is verifed by our team to ensure our highest quality standards.</p>
+      <p className='mt-6 text-lg max-w-prose text-muted-foreground'>Welcome to Seth Bazaar. Every asset on our platform is verifed by our team to ensure our highest quality standards.</p>
       {/* because tailwindcss is mobile first: sm:flex-row */}
       <div className='flex flex-col sm:flex-row gap-4 mt-6'>
         <Link href='/products' className={buttonVariants()}>Browse Trending</Link>
