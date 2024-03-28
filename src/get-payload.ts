@@ -8,7 +8,7 @@ dotenv.config({
     path: path.resolve(__dirname, "../.env")
 })
 
-//to get my client, use caching to save resources
+//to get my client, use caching and save resources
 let cached = (global as any).payload
 
 if(!cached) {
@@ -17,7 +17,7 @@ if(!cached) {
         promise: null,
     }
 }
-
+//InitOptions is a type that payload cms provides
 interface Args {
     initOptions?: Partial<InitOptions>
 }
@@ -31,6 +31,7 @@ export const getPayloadClient = async ({initOptions}: Args = {}) => {
         return cached.client;
     }
     if(!cached.promise) {
+        //import payload from 'payload gives the init()
         cached.promise = payload.init({
             secret: process.env.PAYLOAD_SECRET,
             local: initOptions?.express ? false : true,

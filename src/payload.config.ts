@@ -4,7 +4,6 @@ import { webpackBundler } from '@payloadcms/bundler-webpack';
 import { slateEditor } from '@payloadcms/richtext-slate';
 import path from "path";
 
-
   export default buildConfig({
     serverURL: process.env.NEXT_PUBLIC_SERVER_URL || '',
     collections: [], //orders, products, userfiles
